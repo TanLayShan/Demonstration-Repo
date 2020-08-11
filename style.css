@@ -1,0 +1,254 @@
+html{
+    /*background-image: url(ic2.jpg);
+    background-size: cover;*/
+
+    /*background-repeat: no repeat;*/
+
+    /*background-image: linear-gradient(to bottom,#00ccff,#00804f,purple );*/
+
+     background-image: radial-gradient(#00ccff,#00804f,purple);
+}
+
+
+.h{
+    color: aqua;
+    text-align: center;
+}
+
+nav{
+    text-align: center; 
+    background-color: royalblue;
+}
+
+nav ul{
+    list-style: none;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+nav li{
+    display:inline-block;
+    padding:20px 10px 20px 10px;
+}
+
+#italic{
+    color: red;
+}
+
+.container{
+    color:green;
+    border: 5px solid brown;
+    margin:5px 20px 5px 20px;
+    padding:50px 40px 50px 40px; 
+}
+
+.container2{
+    text-align: right;
+    border:5px dotted pink;
+    padding:40px 10px 40px 10px;
+    margin:5px 0px 3px 10px;
+}
+
+.circleImg{
+   border-radius:20%; 
+   box-shadow: 10px 10px 10px 10px ;
+
+   /*move the image to center*/
+   display:block;
+   margin-left: auto;
+   margin-right:auto;
+   width:50;
+}
+
+.circle2{
+    border-radius:50%;
+    box-shadow: 15px 10px 15px 10px;
+
+    /*Move the image to the left*/
+    display:block;
+    margin-left: auto;
+    margin-right:80px;
+}
+
+.circle3{
+    border-radius: 80%;
+    box-shadow: 20px 10px 20px 15px ;
+}
+
+.box{
+    /*To build up the a container*/
+    display:inline-block;
+    height:100px;
+    width:100px;
+    background:khaki;
+    margin:5px 0px;
+    text-align: center;
+    flex-wrap: wrap;
+ 
+    /*To build up the box shadow*/
+    /*inset = inside the box*/
+    box-shadow: 10px 5px 10px 5px red inset;
+}
+
+/* type of Keyframe
+1) fade Me
+2) rotation
+3) getBigger
+4) change color
+5) moveBox
+*/
+
+/*Keyframe is for the animation and  fadeMe is the name of the keyframe*/
+@keyframes fadeMe{
+    /*0% = the beginner of the animation*/
+    0%{
+        opacity:1; /*we can see the box while the box start moving*/
+    }
+
+    100%{
+        opacity:0% /* the animation stop*/
+    }
+}
+
+@keyframes rotation{
+    0%{transform: rotate(90deg);}
+    25%{transform: rotate(180deg);}
+    50%{transform: rotate(360deg);}
+    75%{transform: rotate(180deg);}
+    100%{transform: rotate(90deg);}
+}
+
+@keyframes getBigger{
+    0%{transform: scale(0.8);}
+    25%{transform: scale(0.9);}
+    50%{transform:scale(1);}
+}
+
+@keyframes changeColor{
+   0%{background-color:grey;}
+   0%{background-color:yellow;}
+   0%{background-color:red;}
+   0%{background-color:purple;}
+} 
+
+@keyframes moveBox{
+    0%{left: 0px; top: 0px;}
+    25%{left: 100px; top: 0px;} /*Move to the right 100px*/
+    50%{left: 100px; top: 200px;}/*Move to the right 100px and move away from the top 200px */
+    75%{left: 0px; top: 200;} /* left going back to 0px */
+    100%{left: 0px; top: 0px;} /*go back to 0px 0px*/
+}
+
+#b1{
+    animation-name: fadeMe;
+    animation-duration: 10s;
+    animation-timing-function: linear ; /*only one cycle*/
+    animation-iteration-count: infinite;
+    border-radius: 20%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+
+}
+
+#b3{
+    animation-name: fadeMe;
+    animation-duration: 10s;
+    animation-timing-function: linear ; /*only one cycle*/
+    animation-iteration-count: infinite;
+    border-radius: 20%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+
+}
+
+#b5{
+    animation-name: fadeMe;
+    animation-duration: 10s;
+    animation-timing-function: linear ; /*only one cycle*/
+    animation-iteration-count: infinite;
+    border-radius: 20%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+
+}
+
+
+#b2{
+    animation-name: rotation;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+}
+
+#b4{
+    animation-name: rotation;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+}
+
+#b6{
+    animation-name: rotation;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+}
+
+
+
+#b7{
+    animation-name: getBigger;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in;
+    border: radius 20;;
+}
+
+#b8{
+    animation: changeColor 5s infinite;
+}
+
+#b9{
+    animation:changeColor 3s 2s infinite;
+    position: fixed;
+}
+
+#b10{
+    animation: moveBox 5s 3s;
+    background:red;
+    position:relative;
+    animation-iteration-count: infinite;
+}
+
+#b11{
+    top: 100px;
+    left: 200px;
+    position: relative;
+}
+
+#b12{
+    top:350px;
+    right:1000px;
+    position: absolute;
+}
+
+form input{
+    display: block;
+    margin: 50px;
+
+}
+
+form textarea{
+    display:block;
+    margin:55px;
+}
+
+form button{
+    display:inline-block;
+    margin:15px 10px 15px 50px;
+}
